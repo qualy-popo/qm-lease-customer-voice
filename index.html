@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>ページタイトル</title>
+    <meta name="description" content="ページの説明" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="webclip.png" />
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:url" content="URL" />
+    <meta property="og:type" content="website or article" />
+    <meta property="og:title" content="ページのタイトル" />
+    <meta property="og:description" content="ページの説明" />
+    <meta property="og:image" content="URL" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- <meta property="fb:app_id" content="AppID"> -->
+    <meta name="twitter:card" content="summary_large_image or summary" />
+    <!-- <meta name="twitter:site" content="@moshamusha2010" /> -->
+    <meta name="twitter:description" content="ページの説明" />
+    <meta name="twitter:image:src" content="URL" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/import.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Splide -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css" integrity="sha512-cSogJ0h5p3lhb//GYQRKsQAiwRku2tKOw/Rgvba47vg0+iOFrQ94iQbmAvRPF5+qkF8+gT7XBct233jFg1cBaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <!-- 場合によって必要 -->
+    <!-- <meta name="robots" content="noindex,nofollow"> -->
+    <!-- 場合によって必要 -->
+    <!-- <meta name="robots" content="noindex,nofollow"> -->
+  </head>
+
+  <body x-data="{open: false,sopen:false,mopen:false}">
+    <section class="top">
+      <!-- Header Section Start -->
+      <header>
+        <div class="header-block">
+          <div class="header-wrapper">
+            <h1>
+              <a href="/" class="logo">
+                <div class="logo-box big">
+                  <img src="./assets/img/top/logo_icon.png" alt="" class="pc" />
+                  <img src="./assets/img/top/logo_sp.png" alt="" class="sp" />
+                </div>
+              </a>
+            </h1>
+            <div class="row">
+              <a href="/" class="logo-txt">
+                株式会社<br />
+                リースシステム企画
+              </a>
+              <div class="right">
+                <ul class="menu-list" :class="mopen ? '' : 'show-pc'" x-show="mopen" x-transition.duration.500ms>
+                  <li>
+                    <a href="#">私たちについて</a>
+                  </li>
+                  <li class="dropdown" @click="open = ! open" x-bind:class="open?'active':''">
+                    <a href="#" class="dropdown-parent" x-bind:class="open?'active':''">事業内容</a>
+                    <img src="./assets/img/top/down_arr.png" alt="" />
+                    <div class="box" x-show="open" @click.outside="open = false">
+                      <ul class="list">
+                        <li>
+                          <a href="#">LSX・LSC製品情報</a>
+                        </li>
+                        <li>
+                          <a href="#">伴走コンサルティング</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">お客様の声</a>
+                  </li>
+                  <li>
+                    <a href="#">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="#">新着情報</a>
+                  </li>
+                  <li class="dropdown" @click="sopen = ! sopen" x-bind:class="sopen?'active':''">
+                    <a href="#" class="dropdown-parent" x-bind:class="sopen?'active':''">採用情報</a>
+                    <img src="./assets/img/top/down_arr.png" alt="" />
+                    <div class="box" x-show="sopen" @click.outside="sopen = false">
+                      <ul class="list">
+                        <li>
+                          <a href="#">採用情報</a>
+                        </li>
+                        <li>
+                          <a href="#">スタッフインタビュー</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <!-- <li class="contact pc">
+                <a href="#">お問い合わせ</a>
+              </li> -->
+                </ul>
+                <a href="#" class="contact">お問い合わせ</a>
+              </div>
+              <div id="nav-icon4" @click="mopen = ! mopen;sopen=false;open=false" class="menu-btn close sp" x-bind:class="mopen ? 'open' : 'close'">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Header Section End -->
+
+      <!-- MV section start -->
+      <section class="mv-sec">
+        <div class="mv-container">
+          <div class="mv-txt animate__animated animate__slideInLeft">
+            <h2>
+              つながるシステム<br />
+              寄り添うチーム
+            </h2>
+            <p>〜システムと人の力でリース事業の成長を支えます〜</p>
+          </div>
+          <div id="image-carousel" class="splide animate__animated animate__slideInRight">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img src="./assets/img/top/slider_one.png" alt="" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./assets/img/top/slider_two.png" alt="" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./assets/img/top/slider_three.png" alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="scrolldown4"><span>scroll</span></div>
+        </div>
+      </section>
+      <!-- MV section end -->
+    </section>
+
+    <div class="wrapper">
+      <!-- column section start -->
+      <section class="column-sec">
+        <div class="column-block container">
+          <div class="head-txt">
+            <h2 class="head-ttl">COLUMN</h2>
+            <p>コラム</p>
+          </div>
+          <div class="column-flex-list">
+            <a href="" class="column-list-01">
+              <div class="column-img">
+                <img src="./assets/img/columnblock/noimg.png" alt="" />
+              </div>
+              <div class="column-txt-list">
+                <div class="txt-flex-list">
+                  <div>
+                    <p class="btn">カテゴリ</p>
+                  </div>
+                  <div class="left-txt">
+                    <p>2023.05.01</p>
+                  </div>
+                  <p class="right-txt">タイトルが入ります。</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="column-list-02">
+              <div class="column-img">
+                <img src="./assets/img/columnblock/noimg.png" alt="" />
+              </div>
+              <div class="column-txt-list">
+                <div class="txt-flex-list">
+                  <div>
+                    <p class="btn">カテゴリ</p>
+                  </div>
+                  <div class="left-txt">
+                    <p>2023.05.01</p>
+                  </div>
+                  <p class="right-txt">タイトルが入ります。</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="column-list-03">
+              <div class="column-img">
+                <img src="./assets/img/columnblock/noimg.png" alt="" />
+              </div>
+              <div class="column-txt-list">
+                <div class="txt-flex-list">
+                  <div>
+                    <p class="btn">カテゴリ</p>
+                  </div>
+                  <div class="left-txt">
+                    <p>2023.05.01</p>
+                  </div>
+                  <p class="right-txt">タイトルが入ります。</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <a href="" class="button">
+            <p>一覧へ</p>
+          </a>
+        </div>
+      </section>
+      <!-- column section end -->
+
+      <!-- message section start -->
+      <div class="message-sec">
+        <div class="message"></div>
+        <div class="message-txt-block">
+          <div class="message-wrapper container">
+            <div class="head-txt">
+              <h2 class="head-ttl">MESSAGE</h2>
+              <p>メッセージ</p>
+            </div>
+            <div class="message-txt">
+              <p>「システム設計・開発の知」リース業務の知」</p>
+              <p>「2つの知」を兼ね備えたチームが<br class="d-sp" />リース事業者様に伴走します</p>
+            </div>
+            <div class="message-content">
+              <p>リース会社様の本来の目的は、効率化のためにシステム導入することではありません。リースを利用するお客様の未来をつくることです。その目的をいっしょに達成するために、私たちは1991年リースシステム企画を創業いたしました。</p>
+
+              <p>リース専用システムを設計・開発を通して、100社上の導入実績やお客様の声に基づき、多様なリース業務にも対応可能な機能の実装、直感的UI設計、事業の変化や税制・法改正に合わせて可変しやすい仕様への改善など「システム設計・開発の知」を進化させてまいりました。</p>
+
+              <p>「リース業務の知」については、現場に足を運び、多様な要件や業務にお客様と一緒に課題解決に取り組んできたからこその蓄積が私たちの知識となりノウハウとなりました。これも長くお付き合いいただいているお客様のおかげです。</p>
+
+              <p>リースシステム企画は、リース会社の経営者の皆様、働く方たち、リースに関わるすべて方々に常に寄り添い頼りにされる企業であり続けます。</p>
+            </div>
+            <a href="" class="button">
+              <p>一覧へ</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- message section end -->
+
+      <!-- Business section -->
+      <section class="business-sec">
+        <div class="container">
+          <div class="head-txt">
+            <h2 class="head-ttl">BUSINESS</h2>
+            <p>事業</p>
+          </div>
+          <p class="business-maintxt">
+            リース、モノのサブスクリプションサービス、<br class="sp" />そしてリースに関わるすべての方とともに、<br />
+            同じ目的に向かう「寄り添うシステム（組織体）」
+          </p>
+          <p class="business-txt">
+            リースの知識、知見から生まれる知恵を肥やしとする土壌は私たちリースシステム企画。そこからリース専用会計システム「LSX」が芽生えました。「LSX」はリース企業様とともに育ち幹となり、「LSC」が花開きリースに関わるすべての方とともに育てる事業へと成長してまいりました。<br />
+            私たちリースシステム企画は肥やしとなる情報や知恵を絶やさずリース会社様、リース事業に関わる方々に伴走してまいります。
+          </p>
+          <div class="business-img">
+            <img src="assets/img/top/business_img.png" alt="事業の画像" />
+          </div>
+          <div class="business-btn">
+            <a href="">
+              <span>LSX・LSC製品情報</span>
+              <img src="assets/img/top/businessbtn_arr.png" alt="事業アイコンの画像" class="img-black" />
+              <img src="assets/img/top/businessbtn_white.png" alt="事業アイコンの画像" class="img-white" />
+            </a>
+          </div>
+          <div class="business-btn">
+            <a href="">
+              <span>伴走コンサルティング</span>
+              <img src="assets/img/top/businessbtn_arr.png" alt="事業アイコンの画像" class="img-black" />
+              <img src="assets/img/top/businessbtn_white.png" alt="事業アイコンの画像" class="img-white" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Business section end -->
+
+      <!-- customer voice section start -->
+      <section class="customer-sec">
+        <div class="customer-block container">
+          <div class="head-txt">
+            <h2 class="head-ttl">CUSTOMER’S VOICE</h2>
+            <p>事例・お客様の声</p>
+          </div>
+          <div class="column-flex-list">
+            <a href="" class="column-list-01">
+              <div class="column-img">
+                <img src="./assets/img/customer/customer.png" alt="" />
+              </div>
+              <div class="column-txt-list">
+                <div class="txt-flex-list">
+                  <div class="left-txt">
+                    <p>2023.05.01</p>
+                  </div>
+                  <p class="right-txt">タイトルが入ります。</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="column-list-02">
+              <div class="column-img">
+                <img src="./assets/img/customer/customer.png" alt="" />
+              </div>
+              <div class="column-txt-list">
+                <div class="txt-flex-list">
+                  <div class="left-txt">
+                    <p>2023.05.01</p>
+                  </div>
+                  <p class="right-txt">タイトルが入ります。</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="column-list-03">
+              <div class="column-img">
+                <img src="./assets/img/customer/customer.png" alt="" />
+              </div>
+              <div class="column-txt-list">
+                <div class="txt-flex-list">
+                  <div class="left-txt">
+                    <p>2023.05.01</p>
+                  </div>
+                  <p class="right-txt">タイトルが入ります。</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <a href="" class="button">
+            <p>もっと見る</p>
+          </a>
+          <div class="faq-img">
+            <div class="overlay"></div>
+            <img src="./assets/img/customer/faq.png" />
+            <div class="faq-arrow">
+              <div class="arrow-img"><img src="./assets/img/customer/faq-arrow.png" /></div>
+              <div class="faq-txt">
+                <p class="faq">FAQ</p>
+                <p class="txt fz-b">よくある質問</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- customer voice section end -->
+
+      <!-- new section start -->
+      <section class="news-sec">
+        <div class="block container">
+          <div class="column-block ">
+            <div class="head-txt">
+              <h2 class="head-ttl">NEWS</h2>
+              <p>新着情報</p>
+            </div>
+            <div class="column-flex-list">
+              <a href="" class="column-list-01">
+                <div class="column-img">
+                  <img src="./assets/img/columnblock/noimg.png" alt="" />
+                </div>
+                <div class="column-txt-list">
+                  <div class="txt-flex-list">
+                    <div>
+                      <p class="btn">カテゴリ</p>
+                    </div>
+                    <div class="left-txt">
+                      <p>2023.05.01</p>
+                    </div>
+                  </div>
+                  <p class="right-txt">タイトルが入ります。</p>
+                </div>
+              </a>
+              <a href="" class="column-list-02">
+                <div class="column-img">
+                  <img src="./assets/img/columnblock/noimg.png" alt="" />
+                </div>
+                <div class="column-txt-list">
+                  <div class="txt-flex-list">
+                    <div>
+                      <p class="btn">カテゴリ</p>
+                    </div>
+                    <div class="left-txt">
+                      <p>2023.05.01</p>
+                    </div>
+                  </div>
+                  <p class="right-txt">タイトルが入ります。</p>
+                </div>
+              </a>
+              <a href="" class="column-list-03">
+                <div class="column-img">
+                  <img src="./assets/img/columnblock/noimg.png" alt="" />
+                </div>
+                <div class="column-txt-list">
+                  <div class="txt-flex-list">
+                    <div>
+                      <p class="btn">カテゴリ</p>
+                    </div>
+                    <div class="left-txt">
+                      <p>2023.05.01</p>
+                    </div>
+                  </div>
+                  <p class="right-txt">タイトルが入ります。</p>
+                </div>
+              </a>
+            </div>
+            <a href="" class="button">
+              <p>一覧へ</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- news section end -->
+
+      <!-- To Top Button  -->
+      <div class="totop-btn-container">
+        <div class="totop-btn">
+          <div class="totop-btn-gp">
+            <img src="./assets/img/top/arrow_top_btn.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- To Top Button end  -->
+
+      <!-- footer  -->
+      <footer>
+        <div class="interview-blk">
+          <div class="container">
+            <a href="">
+              <div class="interview-box">
+                <div class="interview-img">
+                  <img src="assets/img/top/footer_icon.png" alt="インタビューアイコンの画像" />
+                </div>
+                <div class="interview-txt">
+                  <span class="interview-eng fz-fot-sb">INTERVIEW</span>
+                  <span class="interview-jp">スタッフインタビュー</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-Recruit">
+          <div class="container">
+            <a href="">
+              <div class="footer-Recruit-blk sp-sub-container">
+                <p class="footer-Recruit-txt">採用情報</p>
+                <div class="footer-Recruit-img">
+                  <img src="assets/img/top/footer_icon.png" alt="採用情報アイコンの画像" />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="footer-dark-blk">
+          <div class="container">
+            <div class="footer-upper sp-sub-container">
+              <ul class="upper-lists pc">
+                <li class="pc"><a href=""> TOP</a></li>
+                <li class="pc">
+                  <a href=""> 私たちについて</a>
+                  <ul>
+                    <li><a href=""> 理念</a></li>
+                    <li><a href=""> 代表メッセージ</a></li>
+                    <li><a href=""> スタッフ紹介</a></li>
+                    <li><a href=""> 沿革</a></li>
+                    <li><a href=""> 会社概要</a></li>
+                  </ul>
+                </li>
+                <li class="pc third-list">
+                  <a href=""> 事業</a>
+                  <ul>
+                    <li><a href="">LSX・LSC商品情報</a></li>
+                    <li><a href="">伴走コンサルティグ</a></li>
+                  </ul>
+                </li>
+                <li class="pc"><a href=""> お客様の声</a></li>
+              </ul>
+              <ul class="lower-lists">
+                <li class="pc"><a href="">よくある質問</a></li>
+                <li class="pc"><a href=""> 新着情報</a></li>
+                <li class="pc third-list">
+                  <a href="">採用情報</a>
+                  <ul>
+                    <li><a href="">スタッフインタビュー</a></li>
+                  </ul>
+                </li>
+                <li class="lower-last-list">
+                  <a href="">お問合せ</a>
+                  <ul>
+                    <li><a href="">プライバシーポリシー</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-lower">
+            <div class="container">
+              <div class="sp-sub-container">
+                <div class="footer-address">
+                  <div class="footer-logo">
+                    <img src="assets/img/top/footer_logo.png" alt="リースシステムの画像" />
+                  </div>
+                  <div class="footer-address-info">
+                    <p class="footer-add-ttl">株式会社リースシステム企画</p>
+                    <p class="footer-add-txt">〒333-0851</p>
+                    <p class="footer-add-txt">埼玉県川口市芝新町4-6 YS TOWER 5F</p>
+                    <p class="footer-add-txt">TEL 048-263-1733</p>
+                  </div>
+                </div>
+                <p class="footer-copyright">&copy;株式会社リースシステム企画_2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer end -->
+    </div>
+
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js" integrity="sha512-4TcjHXQMLM7Y6eqfiasrsnRCc8D/unDeY1UGKGgfwyLUCTsHYMxF7/UHayjItKQKIoP6TTQ6AMamb9w2GMAvNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/common.js"></script>
+
+    <!-- <script></script> -->
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slide-in {
+        z-index: 10; /* to position it in front of the other content */
+        position: absolute;
+        overflow: hidden; /* to prevent scrollbar appearing */
+      }
+
+      .slide-in.from-left {
+        left: 0;
+      }
+
+      .slide-in.from-right {
+        right: 0;
+      }
+
+      .slide-in-content {
+        /* padding: 5px 20px;
+  background: #eee; */
+        transition: transform 0.5s ease; /* our nice transition */
+      }
+
+      .slide-in.from-left .slide-in-content {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+      }
+
+      .slide-in.from-right .slide-in-content {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+      }
+
+      .slide-in.show .slide-in-content {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-in from-left">
+      <div class="slide-in-content">
+        <ul>
+          <li>Lorem</li>
+          <li>Ipsum</li>
+          <li>Dolor</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide-in from-right">
+      <div class="slide-in-content">
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+        </ul>
+      </div>
+    </div>
+
+    <button id="toggle" style="position: absolute; top: 120px">Toggle</button>
+  </body>
+  <script>
+    // $("#toggle").click(function () {});
+    // setTimeout(function () {
+    //   $(".slide-in").addClass("show");
+    // }, 300);
+  </script>
+</html>
