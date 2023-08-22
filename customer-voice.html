@@ -50,90 +50,109 @@
 </head>
 
 <body x-data="{open: false,sopen:false,mopen:false}">
-    <section class="customer-voice">
-        <!-- Header Section Start -->
-        <header>
-            <div class="header-block">
-                <div class="header-wrapper">
-                    <h1>
-                        <a href="/" class="logo">
-                            <div class="logo-box big">
-                                <img src="./assets/img/top/logo_icon.png" alt="" class="pc" />
-                                <img src="./assets/img/top/logo_sp.png" alt="" class="sp" />
-                            </div>
-                        </a>
-                    </h1>
-                    <div class="row">
-                        <a href="/" class="logo-txt">
-                            株式会社<br />
-                            リースシステム企画
-                        </a>
-                        <div class="right">
-                            <ul class="menu-list" :class="mopen ? '' : 'show-pc'" x-show="mopen"
-                                x-transition.duration.500ms>
-                                <li>
-                                    <a href="#">私たちについて</a>
-                                </li>
-                                <li class="dropdown" @click="open = ! open" x-bind:class="open?'active':''">
-                                    <a href="#" class="dropdown-parent" x-bind:class="open?'active':''">事業内容</a>
-                                    <img src="./assets/img/top/down_arr.png" alt="" />
-                                    <div class="box" x-show="open" @click.outside="open = false">
-                                        <ul class="list">
-                                            <li>
-                                                <a href="#">LSX・LSC製品情報</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">伴走コンサルティング</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#">お客様の声</a>
-                                </li>
-                                <li>
-                                    <a href="#">FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="#">新着情報</a>
-                                </li>
-                                <li class="dropdown" @click="sopen = ! sopen" x-bind:class="sopen?'active':''">
-                                    <a href="#" class="dropdown-parent" x-bind:class="sopen?'active':''">採用情報</a>
-                                    <img src="./assets/img/top/down_arr.png" alt="" />
-                                    <div class="box" x-show="sopen" @click.outside="sopen = false">
-                                        <ul class="list">
-                                            <li>
-                                                <a href="#">採用情報</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">スタッフインタビュー</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <!-- <li class="contact pc">
+    <!-- Header Section Start -->
+    <header class="customer-voice">
+        <div class="header-block">
+            <div class="header-wrapper">
+                <h1>
+                    <a href="/" class="logo">
+                        <div class="logo-box big">
+                            <img src="./assets/img/top/logo_icon.png" alt="" class="pc" />
+                            <img src="./assets/img/top/logo_sp.png" alt="" class="sp" />
+                        </div>
+                    </a>
+                </h1>
+                <div class="row">
+                    <a href="/" class="logo-txt">
+                        株式会社<br />
+                        リースシステム企画
+                    </a>
+                    <div class="right">
+                        <ul class="menu-list" :class="mopen ? '' : 'show-pc'" x-show="mopen"
+                            x-transition.duration.500ms>
+                            <li>
+                                <a href="#">私たちについて</a>
+                            </li>
+                            <li class="dropdown" @click="open = ! open" x-bind:class="open?'active':''">
+                                <a href="#" class="dropdown-parent" x-bind:class="open?'active':''">事業内容</a>
+                                <img src="./assets/img/top/down_arr.png" alt="" />
+                                <div class="box" x-show="open" @click.outside="open = false">
+                                    <ul class="list">
+                                        <li>
+                                            <a href="#">LSX・LSC製品情報</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">伴走コンサルティング</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">お客様の声</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">新着情報</a>
+                            </li>
+                            <li class="dropdown" @click="sopen = ! sopen" x-bind:class="sopen?'active':''">
+                                <a href="#" class="dropdown-parent" x-bind:class="sopen?'active':''">採用情報</a>
+                                <img src="./assets/img/top/down_arr.png" alt="" />
+                                <div class="box" x-show="sopen" @click.outside="sopen = false">
+                                    <ul class="list">
+                                        <li>
+                                            <a href="#">採用情報</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">スタッフインタビュー</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- <li class="contact pc">
                 <a href="#">お問い合わせ</a>
               </li> -->
-                            </ul>
-                            <a href="#" class="contact">お問い合わせ</a>
-                        </div>
-                        <div id="nav-icon4" @click="mopen = ! mopen;sopen=false;open=false" class="menu-btn close sp"
-                            x-bind:class="mopen ? 'open' : 'close'">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
+                        </ul>
+                        <a href="#" class="contact">お問い合わせ</a>
+                    </div>
+                    <div id="nav-icon4" @click="mopen = ! mopen;sopen=false;open=false" class="menu-btn close sp"
+                        x-bind:class="mopen ? 'open' : 'close'">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- Header Section End -->
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- mv section start -->
+    <section class="mv-feedback-sec">
+        <div class="mv-feedback-blk">
+            <div class="container">
+                <h2 class="mv-feedback-ttl">お客様の声</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="breadcrumb-link pc">
+                <ul>
+                    <li class="prev-link first"><a href="">トップ</a></li>
+                    <img src="assets/img/detail/breadcrumb_stick.png" alt="">
+                    <li class="prev-link"><a href="">お客様の声一覧</a></li>
+                    <img src="assets/img/detail/breadcrumb_stick.png" alt="">
+                    <li class="current-link"><a href="">タイトルが入ります。タイトルが入ります。</a></li>
+                </ul>
+            </div>
+        </div>
     </section>
+    <!-- mv section end -->
 
     <div class="wrapper">
 
         <!-- customer-voice-secion start -->
-        <div class="category-block pt150 pt100-sp">
+        <div class="category-block">
             <div class="category-flex">
                 <a href="">
                     <p>カテゴリ</p>
@@ -251,10 +270,10 @@
             <div class="pagination-button-list">
                 <div class="pagi-flex">
                     <a href="#">
-                        <p><img src="./assets/img/detail/right_arr.png"/>前へ</p>
+                        <p><img src="./assets/img/detail/right_arr.png" />前へ</p>
                     </a>
                     <a href="#">
-                        <p>次へ<img src="./assets/img/detail/left_arr.png"/></p>
+                        <p>次へ<img src="./assets/img/detail/left_arr.png" /></p>
                     </a>
                 </div>
             </div>
