@@ -1176,6 +1176,16 @@ footer {
 /*footer end*/
 
 /* customer voice section start */
+.mv-feedback-sec.mv-voice-sec{
+  .breadcrumb-link{
+    max-width: 201px;
+    ul{
+      padding: 7.5px 0 8.5px;
+      justify-content: center;
+    }
+  }
+}
+
 .customer-voice {
   .header-block {
     .header-wrapper {

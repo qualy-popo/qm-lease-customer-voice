@@ -919,6 +919,14 @@ footer .footer-dark-blk .footer-lower .footer-copyright {
 }
 /*footer end*/
 /* customer voice section start */
+.mv-feedback-sec.mv-voice-sec .breadcrumb-link {
+  max-width: 201px;
+}
+.mv-feedback-sec.mv-voice-sec .breadcrumb-link ul {
+  padding: 7.5px 0 8.5px;
+  justify-content: center;
+}
+
 .customer-voice .header-block .header-wrapper {
   background: #fff;
 }
