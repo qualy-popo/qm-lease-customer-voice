@@ -1192,7 +1192,7 @@ footer .footer-dark-blk .footer-lower .footer-copyright {
 
 @media screen and (max-width: 768px) {
   .detail-sec {
-    margin: 60px 0 42px;
+    margin: 60px 0 17px;
   }
   .detail-sec .detail-container {
     max-width: 339px;
@@ -1252,6 +1252,7 @@ footer .footer-dark-blk .footer-lower .footer-copyright {
   }
   .button-list .button p {
     font-size: 1.4rem;
+    padding: 8.75px 0;
   }
 }
 /*Detail section End*/
