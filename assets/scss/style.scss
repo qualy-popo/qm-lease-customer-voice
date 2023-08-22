@@ -1193,7 +1193,7 @@ footer {
 .category-block {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 53px 20px 100px;
+  padding: 45px 20px 100px;
 
   .category-flex {
     max-width: 493px;
@@ -1297,7 +1297,7 @@ footer {
   }
 
   .category-block {
-    padding: 20px 10px;
+    padding: 60px 10px;
 
     .category-flex {
       max-width: 360px;
@@ -1327,6 +1327,10 @@ footer {
 
   }
 
+  .pagination-button-list {
+    padding: 40px 0 60px;
+  }
+
   .button-list {
     flex-direction: column;
 
@@ -1337,6 +1341,7 @@ footer {
 
       p {
         width: 100%;
+        padding: 10px 0;
       }
     }
   }
@@ -1543,7 +1548,7 @@ footer {
     .pagination-button-list {
       max-width: 321px;
       margin: 0 auto;
-      padding: 60px 0 60px;
+      padding: 40px 0 60px;
       .pagi-flex {
         gap: 20px;
     

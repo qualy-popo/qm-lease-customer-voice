@@ -929,7 +929,7 @@ footer .footer-dark-blk .footer-lower .footer-copyright {
 .category-block {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 53px 20px 100px;
+  padding: 45px 20px 100px;
 }
 .category-block .category-flex {
   max-width: 493px;
@@ -1012,7 +1012,7 @@ footer .footer-dark-blk .footer-lower .footer-copyright {
     height: 60px !important;
   }
   .category-block {
-    padding: 20px 10px;
+    padding: 60px 10px;
   }
   .category-block .category-flex {
     max-width: 360px;
@@ -1031,6 +1031,9 @@ footer .footer-dark-blk .footer-lower .footer-copyright {
   .customer-column-list .column-flex-list .column-txt-list {
     margin: 0;
   }
+  .pagination-button-list {
+    padding: 40px 0 60px;
+  }
   .button-list {
     flex-direction: column;
   }
@@ -1041,6 +1044,7 @@ footer .footer-dark-blk .footer-lower .footer-copyright {
   }
   .button-list .button p {
     width: 100%;
+    padding: 10px 0;
   }
 }
 /* customer voice section end */
@@ -1230,7 +1234,7 @@ footer .footer-dark-blk .footer-lower .footer-copyright {
   .detail-sec .pagination-button-list {
     max-width: 321px;
     margin: 0 auto;
-    padding: 60px 0 60px;
+    padding: 40px 0 60px;
   }
   .detail-sec .pagination-button-list .pagi-flex {
     gap: 20px;
