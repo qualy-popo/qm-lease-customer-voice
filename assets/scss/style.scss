@@ -1421,7 +1421,7 @@ footer {
     .container{
       max-width: 339px;
       margin: 0 auto;
-      padding: 0 10px;
+      padding: 0;
     }
     .mv-feedback-ttl{
       padding-top: 29px;
@@ -1431,6 +1431,14 @@ footer {
    }
   
   }
+}
+@media screen and (max-width: 360px) {
+  .mv-feedback-sec{
+    .container{
+      padding: 0 10px !important;
+    }
+   }
+  
 }
 
 /*MV Detail End*/
