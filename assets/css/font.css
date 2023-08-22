@@ -3,30 +3,6 @@
 /* ===============================
 Font Family
 =============================== */
-@font-face {
-  font-family: jost-bold;
-  src: url(../fonts/Jost-Bold.ttf);
-}
-
-@font-face {
-  font-family: jost-smbold;
-  src: url(../fonts/Jost-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: jost-medium;
-  src: url(../fonts/Jost-Medium.ttf);
-}
-
-@font-face {
-  font-family: jost-regular;
-  src: url(../fonts/Jost-Regular.ttf);
-}
-
-@font-face {
-  font-family: jost-light;
-  src: url(../fonts/Jost-Light.ttf);
-}
 
 @font-face {
   font-family: Hiragino-Kaku-Gothic-ProN;
