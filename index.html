@@ -33,8 +33,10 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Splide -->
+    <link rel="stylesheet" href="./assets/css/slick.css" />
+    <link rel="stylesheet" href="./assets/css/slick-theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css" integrity="sha512-cSogJ0h5p3lhb//GYQRKsQAiwRku2tKOw/Rgvba47vg0+iOFrQ94iQbmAvRPF5+qkF8+gT7XBct233jFg1cBaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -71,7 +73,7 @@
                   <li class="dropdown" @click="open = ! open" x-bind:class="open?'active':''">
                     <a href="#" class="dropdown-parent" x-bind:class="open?'active':''">事業内容</a>
                     <img src="./assets/img/top/down_arr.png" alt="" />
-                    <div class="box" x-show="open" @click.outside="open = false">
+                    <div class="box" x-show="open" @click.outside="open = false" style="display: none">
                       <ul class="list">
                         <li>
                           <a href="#">LSX・LSC製品情報</a>
@@ -94,7 +96,7 @@
                   <li class="dropdown" @click="sopen = ! sopen" x-bind:class="sopen?'active':''">
                     <a href="#" class="dropdown-parent" x-bind:class="sopen?'active':''">採用情報</a>
                     <img src="./assets/img/top/down_arr.png" alt="" />
-                    <div class="box" x-show="sopen" @click.outside="sopen = false">
+                    <div class="box" x-show="sopen" @click.outside="sopen = false" style="display: none">
                       <ul class="list">
                         <li>
                           <a href="#">採用情報</a>
@@ -125,15 +127,15 @@
       <!-- MV section start -->
       <section class="mv-sec">
         <div class="mv-container">
-          <div class="mv-txt animate__animated animate__slideInLeft">
-            <h2>
+          <div class="mv-txt slide-in from-left">
+            <h2 class="slide-in-content">
               つながるシステム<br />
               寄り添うチーム
             </h2>
-            <p>〜システムと人の力でリース事業の成長を支えます〜</p>
+            <p class="slide-in-content">〜システムと人の力でリース事業の成長を支えます〜</p>
           </div>
-          <div id="image-carousel" class="splide animate__animated animate__slideInRight">
-            <div class="splide__track">
+          <div id="image-carousel" class="splide slide-in from-right">
+            <div class="splide__track slide-in-content">
               <ul class="splide__list">
                 <li class="splide__slide">
                   <img src="./assets/img/top/slider_one.png" alt="" />
@@ -211,9 +213,9 @@
               </div>
             </a>
           </div>
-          <a href="" class="button">
-            <p>一覧へ</p>
-          </a>
+          <div class="button">
+            <a href="#" ><p>一覧へ</p></a>
+          </div>
         </div>
       </section>
       <!-- column section end -->
@@ -240,9 +242,9 @@
 
               <p>リースシステム企画は、リース会社の経営者の皆様、働く方たち、リースに関わるすべて方々に常に寄り添い頼りにされる企業であり続けます。</p>
             </div>
-            <a href="" class="button">
-              <p>一覧へ</p>
-            </a>
+            <div class="button">
+              <a href="#" ><p>一覧へ</p></a>
+            </div>
           </div>
         </div>
       </div>
@@ -332,9 +334,9 @@
               </div>
             </a>
           </div>
-          <a href="" class="button">
-            <p>もっと見る</p>
-          </a>
+          <div class="button">
+            <a href="#" ><p>一覧へ</p></a>
+          </div>
           <div class="faq-img">
             <div class="overlay"></div>
             <img src="./assets/img/customer/faq.png" />
@@ -352,8 +354,8 @@
 
       <!-- new section start -->
       <section class="news-sec">
-        <div class="block container">
-          <div class="column-block ">
+        <div class="block">
+          <div class="column-block container">
             <div class="head-txt">
               <h2 class="head-ttl">NEWS</h2>
               <p>新着情報</p>
@@ -408,9 +410,9 @@
                 </div>
               </a>
             </div>
-            <a href="" class="button">
-              <p>一覧へ</p>
-            </a>
+            <div class="button">
+              <a href="#" ><p>一覧へ</p></a>
+            </div>
           </div>
         </div>
       </section>
@@ -524,6 +526,7 @@
 
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js" integrity="sha512-4TcjHXQMLM7Y6eqfiasrsnRCc8D/unDeY1UGKGgfwyLUCTsHYMxF7/UHayjItKQKIoP6TTQ6AMamb9w2GMAvNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/slick.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/common.js"></script>
 
