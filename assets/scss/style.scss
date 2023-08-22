@@ -1193,7 +1193,7 @@ footer {
 .category-block {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 45px 20px 100px;
 
   .category-flex {
     max-width: 493px;
@@ -1227,6 +1227,7 @@ footer {
   .column-flex-list {
     grid-column-gap: 20px;
     grid-row-gap: 55px;
+    padding: 0;
 
     .column-txt-list {
       margin: 12px 0 0;
@@ -1260,7 +1261,7 @@ footer {
           gap: 10px;
 
           img {
-            margin-bottom: 3px;
+            margin-bottom: -2px;
           }
 
         }
