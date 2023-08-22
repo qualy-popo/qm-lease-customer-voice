@@ -1500,7 +1500,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .detail-sec{
-    margin: 60px 0 42px;
+    margin: 60px 0 17px;
     .detail-container{
       max-width: 339px;
       margin: 0 auto;
@@ -1568,6 +1568,7 @@ footer {
     .button{
       p{
         font-size: 1.4rem;
+        padding: 8.75px 0;
       }
     }
   }
