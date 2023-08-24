@@ -53,77 +53,74 @@
     <!-- Header Section Start -->
     <header class="customer-voice">
         <div class="header-block">
-            <div class="header-wrapper">
-                <h1>
-                    <a href="/" class="logo">
-                        <div class="logo-box big">
-                            <img src="./assets/img/top/logo_icon.png" alt="" class="pc" />
-                            <img src="./assets/img/top/logo_sp.png" alt="" class="sp" />
-                        </div>
-                    </a>
-                </h1>
-                <div class="row">
-                    <a href="/" class="logo-txt">
-                        株式会社<br />
-                        リースシステム企画
-                    </a>
-                    <div class="right">
-                        <ul class="menu-list" :class="mopen ? '' : 'show-pc'" x-show="mopen"
-                            x-transition.duration.500ms>
-                            <li>
-                                <a href="#">私たちについて</a>
-                            </li>
-                            <li class="dropdown" @click="open = ! open" x-bind:class="open?'active':''">
-                                <a href="#" class="dropdown-parent" x-bind:class="open?'active':''">事業内容</a>
-                                <img src="./assets/img/top/down_arr.png" alt="" />
-                                <div class="box" x-show="open" @click.outside="open = false">
-                                    <ul class="list">
-                                        <li>
-                                            <a href="#">LSX・LSC製品情報</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">伴走コンサルティング</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">お客様の声</a>
-                            </li>
-                            <li>
-                                <a href="#">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="#">新着情報</a>
-                            </li>
-                            <li class="dropdown" @click="sopen = ! sopen" x-bind:class="sopen?'active':''">
-                                <a href="#" class="dropdown-parent" x-bind:class="sopen?'active':''">採用情報</a>
-                                <img src="./assets/img/top/down_arr.png" alt="" />
-                                <div class="box" x-show="sopen" @click.outside="sopen = false">
-                                    <ul class="list">
-                                        <li>
-                                            <a href="#">採用情報</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">スタッフインタビュー</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- <li class="contact pc">
-                <a href="#">お問い合わせ</a>
-              </li> -->
-                        </ul>
-                        <a href="#" class="contact">お問い合わせ</a>
-                    </div>
-                    <div id="nav-icon4" @click="mopen = ! mopen;sopen=false;open=false" class="menu-btn close sp"
-                        x-bind:class="mopen ? 'open' : 'close'">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+          <div class="header-wrapper">
+            <h1>
+              <a href="./" class="logo">
+                <div class="logo-box big">
+                  <img src="./assets/img/top/logo_icon.png" alt="株式会社 リースシステム企画" class="pc" />
+                  <img src="./assets/img/top/logo_sp.png" alt="株式会社 リースシステム企画" class="sp" />
                 </div>
+              </a>
+            </h1>
+            <div class="row pt10 pt0-sp">
+              <a href="./" class="logo-txt">
+                株式会社<br />
+                リースシステム企画
+              </a>
+              <div class="right">
+                <ul class="menu-list" :class="mopen ? '' : 'show-pc'" x-show="mopen" x-transition.duration.500ms style="display: none">
+                  <li>
+                    <a href="./about-us.html">私たちについて</a>
+                  </li>
+                  <li class="dropdown" @click="open = ! open" x-bind:class="open?'active':''">
+                    <a class="dropdown-parent" x-bind:class="open?'active':''">事業内容</a>
+                    <img src="./assets/img/top/down_arr.png" alt="下矢印" />
+                    <div class="box" x-show="open" @click.outside="open = false" style="display: none">
+                      <ul class="list">
+                        <li>
+                          <a href="./lsx-lsc-info.html">LSX・LSC製品情報</a>
+                        </li>
+                        <li>
+                          <a href="./accompaniment-consulting.html">伴走コンサルティング</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="./voice/index.html">お客様の声</a>
+                  </li>
+                  <li>
+                    <a href="./faq.html">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="./news/index.html">新着情報</a>
+                  </li>
+                  <li class="dropdown" @click="sopen = ! sopen" x-bind:class="sopen?'active':''">
+                    <a class="dropdown-parent" x-bind:class="sopen?'active':''">採用情報</a>
+                    <img src="./assets/img/top/down_arr.png" alt="下矢印" />
+                    <div class="box" x-show="sopen" @click.outside="sopen = false" style="display: none">
+                      <ul class="list">
+                        <li>
+                          <a href="./recruit/index.html">採用情報</a>
+                        </li>
+                        <li>
+                          <a href="./recruit/staff-interview.html">スタッフインタビュー</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <div class="contact">
+                  <a href="./contact.html"><span>お問い合わせ</span></a>
+                </div>
+              </div>
+              <div id="nav-icon4" @click="mopen = ! mopen;sopen=false;open=false" class="menu-btn close sp" x-bind:class="mopen ? 'open' : 'close'">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
+          </div>
         </div>
     </header>
     <!-- Header Section End -->
